@@ -3,7 +3,7 @@ package lesson13.homework10;
 import java.util.Date;
 
 public class  FurnitureOrder extends Order {
-   private String furnitureCode;
+    private String furnitureCode;
 
     public FurnitureOrder(String itemName, Date dateCreated, String shipFromCity, String shipToCity, int basePrice, Customer customerOwned, String furnitureCode) {
         super(itemName, dateCreated, shipFromCity, shipToCity, basePrice, customerOwned);
@@ -11,34 +11,43 @@ public class  FurnitureOrder extends Order {
     }
 
     @Override
-    public    void validateOrder() {
-
-        if(getShipFromCity() == "Киев" || getShipFromCity() == "Львов"){
+    public void validateOrder() {
 
 
-               // if(getCustomerOwned().getName() != null && getCustomerOwned().getCity() != null){
+            if (getShipFromCity() == "Киев" || getShipFromCity() == "Львов") {
+
+
+                // if(getCustomerOwned().getName() != null && getCustomerOwned().getCity() != null){
                 if (getBasePrice() >= 500) {
                     if (getShipToCity() != null) {
 
                         if (getCustomerOwned().getName() != "Тест" && getCustomerOwned().getGender() != null) {
-                        setDateConfirmed(new Date());
+                            setDateConfirmed(new Date());
 
+                        }
                     }
-               // }
+                }
+
+
             }
-
-
         }
-    }
 
-   }
+
 
     @Override
-  public   void calculatePrice() {
-        if(getBasePrice() < 5000)
-            setTotalPrice(getBasePrice() * 1.05);
-         else
-             setTotalPrice(getBasePrice() * 1.02);
+    public void calculatePrice() {
+
+
+            if (getBasePrice() < 5000) {
+                setTotalPrice(getBasePrice() * 1.05);
+            }
+         else {
+
+                setTotalPrice(getBasePrice() * 1.02);
+            }
+
+        }
+
+
     }
 
-}

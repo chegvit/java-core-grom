@@ -36,7 +36,8 @@ public class Demo {
         System.out.println(Arrays.deepToString(userRepository.getUsers()));
         System.out.println(userRepository.update(null));
         System.out.println(Arrays.deepToString(userRepository.getUsers()));
-
+       userRepository.delete(1001);
+        System.out.println(Arrays.deepToString(userRepository.getUsers()));
     }
 
 

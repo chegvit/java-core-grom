@@ -19,15 +19,13 @@ public class Demo {
         API api1 = new BookingComAPI(rooms);
         API api2 = new TripAdvisorAPI(rooms);
         API api3 = new GoogleAPI(rooms);
-
         API[] apis = new API[] {api1,api2,api3};
         Controller controller = new Controller(apis);
 
         System.out.println(Arrays.deepToString(bookingComAPI.getRooms()));
-        System.out.println(Arrays.deepToString(bookingComAPI.findRooms(150,3,"Kiev","Ukraine")));
+        System.out.println(Arrays.deepToString(bookingComAPI.findRooms(150,3,"Kiev","Vostok")));
         System.out.println(Arrays.deepToString(googleAPI.findRooms(200,3,"Dnepr","Vostok")));
         System.out.println(Arrays.deepToString(tripAdvisorAPI.findRooms(130,3,"Dnepr","Vostok")));
-        controller.getApis();
         System.out.println(Arrays.deepToString(controller.check(api1,api2)));
         System.out.println(Arrays.deepToString(controller.requestRooms(150,3,"Dnepr","Vostok")));
     }
