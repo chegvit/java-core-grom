@@ -29,6 +29,7 @@ public class Demo {
         System.out.println(furnitureOrder.getTotalPrice());
         System.out.println(electronicsOrder.getDateConfirmed());
         System.out.println(electronicsOrder.getTotalPrice());
+
     }
 
 }

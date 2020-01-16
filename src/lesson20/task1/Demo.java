@@ -1,10 +1,9 @@
-package lesson13.homework9;
+package lesson20.task1;
 
 import java.util.Arrays;
 
 public class Demo {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws Exception {
         UserRepository userRepository = new UserRepository();
         System.out.println(Arrays.deepToString(userRepository.getUsers()));
         User user = new User(1001, "Ann", "qwe11233");
