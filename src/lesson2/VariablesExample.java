@@ -6,7 +6,7 @@ public class VariablesExample {
         short b = 20000;
         int c = 444;
         long d = 3333333;
-
+        byte k = 10 + 20;
         double e = 3.54545;
         float e1 = 3434.3333f;
 

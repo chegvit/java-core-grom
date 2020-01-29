@@ -23,6 +23,9 @@ public class Demo {
         Transaction transaction10 = new Transaction(53,"Kiev",15,"dgfh",TransactionType.OUTCOME,new Date());
         Controller controller = new Controller();
        controller.save(transaction);
+
+
+
         //System.out.println(Arrays.toString(controller.getTransactionDAO().getTransactions()));
         controller.save(transaction1);
       //  System.out.println(Arrays.toString(controller.getTransactionDAO().getTransactions()));
