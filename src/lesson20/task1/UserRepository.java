@@ -93,6 +93,7 @@ public class UserRepository {
     }
 
     public User findById(long id) throws UserNotFoundException {
+
         for (int i = 0; i < users.length; i++) {
             if ((users[i] != null) && (id == users[i].getId()))
                 return users[i];
@@ -111,7 +112,7 @@ public class UserRepository {
        }
        catch (UserNotFoundException e){
            System.out.println("User with id:"+ user.getId() + " not found. Will be saved") ;
-       }
+      }
 
 
      //   int count = 0;
@@ -125,7 +126,8 @@ public class UserRepository {
         for(User el : users){
             if(el == null){
                 users[i] = user;
-                return users[i];
+
+                 return users[i];
             }
             i++;
         }
